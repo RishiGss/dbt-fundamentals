@@ -14,3 +14,5 @@ Try running the following commands:
 - Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
 
 [Course Link](https://learn.getdbt.com/learn/course/dbt-fundamentals-vs-code/)
+
+Jaffle Shop Data is available in the `jaffle_shop_csv_data` directory.
