@@ -1,0 +1,9 @@
+models:
+  - name: stg_stripe__payments
+    description: "Staging model for stripe payments table."
+    columns:
+      - name: payment_id # renamed from id for clarity
+        description: "Unique identifier for each payment."
+        data_tests:
+          - not_null
+          - unique

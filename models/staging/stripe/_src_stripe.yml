@@ -1,0 +1,13 @@
+sources:
+  - name: stripe
+    database: raw
+    schema: stripe
+    tables:
+      - name: payments
+        description: "This table contains raw payment data from Stripe."
+        columns:
+          - name: id # primary key -> payment_id named as id in source
+            description: "The unique identifier for each payment."
+            data_tests:
+              - not_null
+              - unique

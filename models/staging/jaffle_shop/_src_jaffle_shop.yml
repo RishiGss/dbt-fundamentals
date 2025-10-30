@@ -1,0 +1,22 @@
+sources:
+  - name: jaffle_shop # source name. by default corresponds to the schema name defined below. can be aliased or overwritten
+    description: "Source data for the Jaffle Shop."
+    database: raw # default is the target database. should point to the source database
+    schema: jaffle_shop # schema in the source database
+    tables:
+      - name: customers
+        description: "Raw customer data for the Jaffle Shop."
+        columns:
+          - name: id # primary key -> customer_id named as id in source
+            description: "The unique identifier for each customer."
+            data_tests:
+              - not_null
+              - unique
+      - name: orders
+        description: "Raw order data for the Jaffle Shop."
+        columns:
+          - name: id # primary key -> order_id named as id in source
+            description: "The unique identifier for each order."
+            data_tests:
+              - not_null
+              - unique

@@ -1,0 +1,5 @@
+# this file is used to specify dbt packages to be installed
+# refer hub.getdbt.com to check for packages available
+packages:
+  - package: dbt-labs/codegen
+    version: 0.13.1

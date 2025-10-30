@@ -32,6 +32,18 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 
+# The configurations here apply to all models within the jaffle_shop project.
+# jaffle_shop is the name of this dbt project (line number 5 above - name: 'jaffle_shop').
+# The + in `+materialized` tells dbt that this configuration applies recursively to all models inside that folder and its subfolders.
+
+# staging models are materialized as views for flexibility.
+# intermediate models can be materialized as views or tables based on use case and performance requirements.
+# marts are materialized as tables for performance while reporting & in dashboards
+# specific models can override these settings using the `{{ config(...) }}` macro within the model file itself.
+
 models:
   jaffle_shop:
-    +materialized: view
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
